@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jasa-outbound-malang.netlify.app/sitemap.xml
