@@ -748,8 +748,11 @@
                 let hasResults = false;
 
                 blogCards.forEach(card => {
-                    const title = card.querySelector('h3').textContent.toLowerCase();
-                    const desc = card.querySelector('p').textContent.toLowerCase();
+                    const titleElem = card.querySelector('h3');
+                    const descElem = card.querySelector('p');
+
+                    const title = titleElem ? titleElem.textContent.toLowerCase() : '';
+                    const desc = descElem ? descElem.textContent.toLowerCase() : '';
 
                     if (title.includes(lowerQuery) || desc.includes(lowerQuery)) {
                         card.style.display = ''; // Menampilkan kembali dengan default CSS-nya
